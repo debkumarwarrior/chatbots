@@ -1,0 +1,64 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - query_knowledge_base
+
+entities:
+  - object_type
+  - mention
+  - attribute
+  - movie
+  - genre
+  - star-rating
+  - release-year
+  - imdb
+
+slots:
+  object_type:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  attribute:
+    type: unfeaturized
+  movie:
+    type: unfeaturized
+  genre:
+    type: unfeaturized
+  imdb:
+    type: unfeaturized
+  release-year:
+    type: unfeaturized
+  star-rating:
+    type: unfeaturized
+
+actions:
+- action_query_knowledge_base
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
